@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SplashActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:transitionName="spain_flag"
+        android:id="@+id/spain_flag"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/spain_flag"
+        />
+
+    <ImageView
+        android:transitionName="uk_flag"
+        android:id="@+id/uk_flag"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/uk_flag"
+        />
+
+</LinearLayout>

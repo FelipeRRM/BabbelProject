@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.feliperrm.babbelproject.activities.MenuActivity"
+    >
+
+
+    <ImageView
+        android:id="@+id/bgImgView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/spain_bg"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bgFrameForOpacity"
+        android:background="@color/black_trasparent"
+        />
+
+    <RelativeLayout
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:transitionName="uk_flag"
+            android:layout_marginLeft="40dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/uk_flag"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:transitionName="spain_flag"
+            android:layout_marginRight="40dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/spain_flag"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
