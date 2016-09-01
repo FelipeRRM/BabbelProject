@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">BabbelProject</string>
+    <string name="translation_game">Translation Game!</string>
+    <string name="play_game">Play Game!</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="leaderboards">Leaderboards</string>
+    <string name="about">About</string>
 </resources>

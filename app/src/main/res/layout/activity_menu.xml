@@ -8,12 +8,21 @@
 
 
     <ImageView
-        android:id="@+id/bgImgView"
+        android:id="@+id/bgImgViewSpain"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/spain_bg"
         />
+
+    <ImageView
+        android:id="@+id/bgImgViewUk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/uk_bg"
+        />
+
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -23,28 +32,84 @@
         />
 
     <RelativeLayout
-        android:layout_marginTop="40dp"
         android:layout_marginBottom="70dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
 
         <ImageView
+            android:layout_marginTop="45dp"
+            android:id="@+id/uk_flag"
             android:transitionName="uk_flag"
-            android:layout_marginLeft="40dp"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/uk_flag"
             android:scaleType="centerCrop"/>
 
+        <TextView
+            android:layout_marginTop="40dp"
+            android:id="@+id/titleTxt"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_toLeftOf="@+id/spain_flag"
+            android:layout_toRightOf="@+id/uk_flag"
+            android:textColor="@android:color/white"
+            android:textSize="26sp"
+            android:text="@string/translation_game"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <ImageView
+            android:layout_marginTop="45dp"
+            android:id="@+id/spain_flag"
             android:transitionName="spain_flag"
-            android:layout_marginRight="40dp"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/spain_flag"
             android:layout_alignParentRight="true"
             android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:paddingTop="55dp"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:layout_margin="5dp"
+                android:id="@+id/btnPlay"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/play_game"/>
+
+            <Button
+                android:layout_margin="5dp"
+                android:id="@+id/btnTutorial"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tutorial"/>
+
+            <Button
+                android:layout_margin="5dp"
+                android:id="@+id/btnLeaderboards"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/leaderboards"/>
+
+            <Button
+                android:layout_margin="5dp"
+
+                android:id="@+id/btnAbout"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/about"/>
+
+        </LinearLayout>
 
     </RelativeLayout>
 
