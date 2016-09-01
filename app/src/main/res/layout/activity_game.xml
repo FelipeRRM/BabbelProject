@@ -3,10 +3,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.feliperrm.babbelproject.activities.GameActivity">
+    
+    <ImageView
+        android:src="@drawable/stars_bg"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_less_trasparent"
+        ></FrameLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/blurView"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:blurOverlayColor="#19000000"
+        android:paddingTop="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewHearts"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/txtScore"
+
+                />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/txtScore"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="8dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="@string/score"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/txtScoreNumber"/>
+
+            <TextView
+                android:id="@+id/txtScoreNumber"
+                android:textSize="20sp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="10"
+                android:textColor="@android:color/white"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+
+    </eightbitlab.com.blurview.BlurView>
+
+
+
+        <ImageButton
+            android:id="@+id/positiveButton"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitCenter"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/yes_icon_selector"
+            />
+
+    <ImageButton
+        android:id="@+id/negativeButton"
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitCenter"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/no_icon_selector"
+        />
+
+
+
+
+
+</RelativeLayout>
 
 </RelativeLayout>

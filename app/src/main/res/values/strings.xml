@@ -5,4 +5,5 @@
     <string name="tutorial">Tutorial</string>
     <string name="leaderboards">Leaderboards</string>
     <string name="about">About</string>
+    <string name="score">Score:</string>
 </resources>

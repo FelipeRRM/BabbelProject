@@ -2,6 +2,7 @@ package com.feliperrm.babbelproject.activities;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.content.Intent;
 import android.os.Bundle;
 import android.transition.Transition;
 import android.view.View;
@@ -47,6 +48,13 @@ public class MenuActivity extends BaseActivity {
 
     private void setUpViews(){
         setUpBackgroundAnimation();
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent play = new Intent(MenuActivity.this, GameActivity.class);
+                startActivity(play);
+            }
+        });
     }
 
     private void setUpBackgroundAnimation(){
