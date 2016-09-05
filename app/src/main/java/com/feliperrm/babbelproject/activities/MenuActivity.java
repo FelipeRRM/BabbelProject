@@ -62,7 +62,7 @@ public class MenuActivity extends BaseActivity {
     }
 
     private void hideLondon(){
-        ukBg.animate().alpha(0f).setDuration(2000).setInterpolator(new AccelerateDecelerateInterpolator()).setStartDelay(6000).setListener(new AnimatorListenerAdapter() {
+        ukBg.animate().alpha(0f).setDuration(2000).setInterpolator(new AccelerateDecelerateInterpolator()).setStartDelay(5000).setListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
@@ -72,7 +72,7 @@ public class MenuActivity extends BaseActivity {
     }
 
     private void showLondon(){
-        ukBg.animate().alpha(1f).setDuration(2000).setInterpolator(new AccelerateDecelerateInterpolator()).setStartDelay(6000).setListener(new AnimatorListenerAdapter() {
+        ukBg.animate().alpha(1f).setDuration(2000).setInterpolator(new AccelerateDecelerateInterpolator()).setStartDelay(5000).setListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);

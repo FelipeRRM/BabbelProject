@@ -13,6 +13,11 @@ import com.feliperrm.babbelproject.R;
  */
 public class LifeAdapter extends RecyclerView.Adapter<LifeAdapter.HeartViewHolder> {
 
+    Integer lives;
+
+    public LifeAdapter(Integer lives) {
+        this.lives = lives;
+    }
 
     @Override
     public HeartViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -28,7 +33,7 @@ public class LifeAdapter extends RecyclerView.Adapter<LifeAdapter.HeartViewHolde
 
     @Override
     public int getItemCount() {
-        return 3;
+        return lives;
     }
 
     public static class HeartViewHolder extends RecyclerView.ViewHolder{
@@ -39,5 +44,13 @@ public class LifeAdapter extends RecyclerView.Adapter<LifeAdapter.HeartViewHolde
             super(itemView);
             heart = (ImageView) itemView.findViewById(R.id.heartImage);
         }
+    }
+
+    public Integer getLives() {
+        return lives;
+    }
+
+    public void setLives(Integer lives) {
+        this.lives = lives;
     }
 }

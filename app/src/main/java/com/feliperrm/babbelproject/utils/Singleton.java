@@ -12,7 +12,8 @@ public class Singleton {
 
     private WordSet wordSet;
     private static final String WORD_SET_PREF_KEY = "wordsetprefkey";
-
+    private int highScore;
+    private static final String HIGH_SCORE_PREF_KEY = "highscoreprefkey";
 
     /* Little treatment in case wordSet gets null during execution time, as GC might free this from the Singleton, though very unlikely*/
     public WordSet getWordSet() {
@@ -24,6 +25,20 @@ public class Singleton {
     public void setWordSet(WordSet wordSet) {
         this.wordSet = wordSet;
         Util.salvarSharedPreference(MyApp.getContext(), WORD_SET_PREF_KEY, new Gson().toJson(wordSet));
+    }
+
+    public int getHighScore() {
+        if(highScore==0)
+            highScore = Integer.parseInt(Util.loadSharedPreference(MyApp.getContext(), HIGH_SCORE_PREF_KEY, String.valueOf(0)));
+        return highScore;
+    }
+
+    public void setHighScore(int highScore) {
+        Util.salvarSharedPreference(MyApp.getContext(), HIGH_SCORE_PREF_KEY, String.valueOf(highScore));
+        this.highScore = highScore;
+    }
+
+    public Singleton() {
     }
 
     public static Singleton getSingleton(){

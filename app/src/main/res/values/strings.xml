@@ -6,4 +6,10 @@
     <string name="leaderboards">Leaderboards</string>
     <string name="about">About</string>
     <string name="score">Score:</string>
+    <string name="game_over">Game Over!</string>
+    <string name="go_back_menu">Go Back to Menu</string>
+    <string name="you_scored">You scored</string>
+    <string name="points">points</string>
+    <string name="new_high_score">It\'s a new high score!</string>
+    <string name="high_score_is">High score is</string>
 </resources>

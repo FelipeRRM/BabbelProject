@@ -5,30 +5,36 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.feliperrm.babbelproject.activities.GameActivity">
-    
+
+
+<RelativeLayout
+    android:id="@+id/blurParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
     <ImageView
         android:src="@drawable/stars_bg"
         android:scaleType="centerCrop"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-    
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black_less_trasparent"
+        android:background="@color/black_more_trasparent"
         ></FrameLayout>
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+
+
 
     <eightbitlab.com.blurview.BlurView
         android:id="@+id/blurView"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="80dp"
         app:blurOverlayColor="#19000000"
-        android:paddingTop="15dp">
+        android:paddingTop="25dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -36,55 +42,86 @@
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerViewHearts"
-                android:layout_width="match_parent"
+                android:layout_width="100dp"
                 android:layout_height="20dp"
                 android:layout_centerVertical="true"
-                android:layout_toLeftOf="@+id/txtScore"
-
                 />
 
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:id="@+id/txtScore"
-                android:textColor="@android:color/white"
-                android:layout_marginRight="8dp"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:text="@string/score"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_toRightOf="@+id/recyclerViewHearts"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_toLeftOf="@+id/txtScoreNumber"/>
+                android:id="@+id/layoutForCurrentWord"
+                android:layout_toLeftOf="@+id/scoreLayout"
+                android:orientation="horizontal"
+                />
 
-            <TextView
-                android:id="@+id/txtScoreNumber"
-                android:textSize="20sp"
-                android:layout_marginRight="15dp"
-                android:gravity="center"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:text="10"
-                android:textColor="@android:color/white"
                 android:layout_alignParentRight="true"
-                />
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/scoreLayout"
+                >
+
+                <TextView
+                    android:id="@+id/txtScore"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="@string/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/txtScoreNumber"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/txtScoreNumber"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    />
+
+            </LinearLayout>
+
 
         </RelativeLayout>
 
     </eightbitlab.com.blurview.BlurView>
 
 
+</RelativeLayout>
 
-        <ImageButton
-            android:id="@+id/positiveButton"
-            android:background="@android:color/transparent"
-            android:layout_marginRight="30dp"
-            android:layout_marginBottom="70dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:scaleType="fitCenter"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@drawable/yes_icon_selector"
-            />
+    <TextView
+        android:shadowColor="@android:color/black"
+        android:shadowDy="3"
+        android:shadowDx="3"
+        android:shadowRadius="4"
+        android:layout_marginTop="-40dp"
+        android:id="@+id/txtFalling"
+        android:text="Guerra nas Estrelas"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:id="@+id/positiveButton"
+        android:background="@android:color/transparent"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitCenter"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/yes_icon_selector"
+        />
 
     <ImageButton
         android:id="@+id/negativeButton"
@@ -100,9 +137,93 @@
         />
 
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_trasparent"
+        android:id="@+id/backgroundForNewWord"></FrameLayout>
+
+    <TextView
+        android:shadowColor="@android:color/darker_gray"
+        android:shadowDx="0.1"
+        android:shadowDy="0.1"
+        android:shadowRadius="18"
+        android:id="@+id/textCurrentWord"
+        android:textSize="32sp"
+        android:textColor="@android:color/white"
+        android:text="STAR WARS"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/layoutGameOver"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_less_trasparent"
+        android:orientation="vertical">
+
+        <TextView
+            android:shadowRadius="15"
+            android:shadowColor="@android:color/darker_gray"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@android:color/white"
+            android:text="@string/game_over"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:shadowRadius="15"
+            android:shadowColor="@android:color/darker_gray"
+            android:id="@+id/txtEndScore"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:textColor="@android:color/white"
+            android:text="You scored 50 points!"
+            />
+
+        <TextView
+            android:shadowRadius="15"
+            android:shadowColor="@android:color/darker_gray"
+            android:id="@+id/txtHighScore"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:textColor="@android:color/white"
+            android:text="High score: 60"
+            />
+
+        <Button
+            android:id="@+id/btnPlayAgain"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Play Again!"
+            />
+
+        <Button
+            android:id="@+id/btnGoMenu"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/go_back_menu"
+            />
+
+    </LinearLayout>
 
 
-
-</RelativeLayout>
 
 </RelativeLayout>
