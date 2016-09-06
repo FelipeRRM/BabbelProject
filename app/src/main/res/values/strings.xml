@@ -17,4 +17,5 @@
     <string name="tutorial_score">This is your score. The higher it gets, the faster the words will fall!</string>
     <string name="tutorial_button">Negative button! Press if the translation is wrong!</string>
     <string name="tutorial_positive">Positive button! Press if the translation is correct!</string>
+    <string name="about_project">Project made entirely by Felipe Magalhães.\nYou can find this and my other projects at my GitHub: <a href="https://github.com/FelipeRRM">https://github.com/FelipeRRM</a>.\n\nYou can also have a look at some of my commercial projects at\nmy portfolio: <a href="http://www.FelipeRRM.com">http://www.FelipeRRM.com</a></string>
 </resources>

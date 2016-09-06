@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.feliperrm.babbelproject.R;
 import com.feliperrm.babbelproject.utils.Singleton;
@@ -68,6 +69,21 @@ public class MenuActivity extends BaseActivity {
             public void onClick(View view) {
                 Intent tut = new Intent(MenuActivity.this, TutorialActivity.class);
                 startActivity(tut);
+            }
+        });
+
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent abt = new Intent(MenuActivity.this, AboutActivity.class);
+                startActivity(abt);
+            }
+        });
+
+        leaderboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MenuActivity.this, "Sorry, hasn't been implemented yet :(", Toast.LENGTH_LONG).show();
             }
         });
     }
