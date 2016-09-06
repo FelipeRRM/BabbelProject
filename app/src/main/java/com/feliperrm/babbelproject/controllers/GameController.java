@@ -263,7 +263,7 @@ public class GameController {
 
     public void positveClicked(){
         if(fallingSubs!=null && !fallingSubs.isUnsubscribed()){
-            if(isTranslationCorrect(currentWord,fallingWord))
+            if(Word.isTranslationCorrect(currentWord,fallingWord))
                 correctAnswer();
             else
                 wrongAnswerOrWordFeel();
@@ -272,18 +272,11 @@ public class GameController {
 
     public void negativeClicked(){
         if(fallingSubs!=null && !fallingSubs.isUnsubscribed()){
-            if(!isTranslationCorrect(currentWord,fallingWord))
+            if(!Word.isTranslationCorrect(currentWord,fallingWord))
                 correctAnswer();
             else
                 wrongAnswerOrWordFeel();
         }
-    }
-
-    public boolean isTranslationCorrect(Word first, Word second){
-        if(first.getText_eng().equals(second.getText_eng()))
-            return true;
-        else
-            return false;
     }
 
     public void resume(){

@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.feliperrm.babbelproject.R;
+import com.feliperrm.babbelproject.utils.Singleton;
 import com.feliperrm.babbelproject.utils.Util;
 
 public class MenuActivity extends BaseActivity {
@@ -51,8 +52,22 @@ public class MenuActivity extends BaseActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent play = new Intent(MenuActivity.this, GameActivity.class);
-                startActivity(play);
+                if(Singleton.getSingleton().isTutorialSeen()) {
+                    Intent play = new Intent(MenuActivity.this, GameActivity.class);
+                    startActivity(play);
+                }
+                else{
+                    Intent tut = new Intent(MenuActivity.this, TutorialActivity.class);
+                    startActivity(tut);
+                }
+            }
+        });
+
+        tutorial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent tut = new Intent(MenuActivity.this, TutorialActivity.class);
+                startActivity(tut);
             }
         });
     }

@@ -29,4 +29,11 @@ public class Word implements Serializable {
         this.text_spa = text_spa;
     }
 
+    public static boolean isTranslationCorrect(Word first, Word second){
+        if(first.getText_eng().equals(second.getText_eng()))
+            return true;
+        else
+            return false;
+    }
+
 }

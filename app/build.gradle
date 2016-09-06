@@ -30,4 +30,5 @@ dependencies {
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.eightbitlab:blurview:1.1.2'
     compile 'com.android.support:recyclerview-v7:24.2.0'
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
 }

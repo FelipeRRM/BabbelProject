@@ -38,6 +38,7 @@
         >
 
         <ImageView
+            android:elevation="3dp"
             android:layout_marginTop="45dp"
             android:id="@+id/uk_flag"
             android:transitionName="uk_flag"
@@ -48,6 +49,7 @@
             android:scaleType="centerCrop"/>
 
         <TextView
+            fontPath="carioca.ttf"
             android:layout_marginTop="40dp"
             android:id="@+id/titleTxt"
             android:padding="10dp"
@@ -55,13 +57,18 @@
             android:layout_toLeftOf="@+id/spain_flag"
             android:layout_toRightOf="@+id/uk_flag"
             android:textColor="@android:color/white"
-            android:textSize="26sp"
+            android:textSize="28sp"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="4"
+            android:shadowDx="-2"
+            android:shadowDy="2"
             android:text="@string/translation_game"
             android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <ImageView
+            android:elevation="3dp"
             android:layout_marginTop="45dp"
             android:id="@+id/spain_flag"
             android:transitionName="spain_flag"

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.feliperrm.babbelproject.activities.TutorialActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tutorial_bg"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_trasparent"/>
+
+    <ImageView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="80dp"
+        android:rotation="30"
+        android:src="@drawable/arrow_top_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/arrow_lives"
+        />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        style="@style/tutorial_text_style"
+        android:text="@string/tutorial_lives"
+        android:layout_below="@+id/arrow_lives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/arrow_word"
+        android:rotation="60"
+        android:paddingLeft="45dp"
+        android:layout_marginTop="120dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/arrow_top_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="120dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/tutorial_word"
+        style="@style/tutorial_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/arrow_word"
+        />
+
+    <ImageView
+        android:id="@+id/arrow_score"
+        android:scaleX="0.75"
+        android:scaleY="0.75"
+        android:rotation="-15"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="50dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/arrow_top_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginLeft="-20dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/arrow_word"
+        android:text="@string/tutorial_score"
+        style="@style/tutorial_text_style"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/arrow_score"
+        android:layout_marginTop="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:rotation="-20"
+        android:id="@+id/arrow_negative"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="160dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/arrow_bottom_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="-15dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="150dp"
+        android:layout_alignTop="@+id/arrow_negative"
+        android:text="@string/tutorial_button"
+        android:layout_toRightOf="@+id/arrow_negative"
+        style="@style/tutorial_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="160dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/arrow_positive"
+        android:src="@drawable/arrow_bottom_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="@string/tutorial_positive"
+        android:layout_alignRight="@+id/arrow_positive"
+        style="@style/tutorial_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/arrow_positive"
+        android:layout_marginLeft="250dp"
+        android:layout_marginRight="-50dp"
+        android:layout_marginTop="-75dp"
+        />
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:text="@string/play_game"
+        android:layout_marginBottom="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -12,4 +12,9 @@
     <string name="points">points</string>
     <string name="new_high_score">It\'s a new high score!</string>
     <string name="high_score_is">High score is</string>
+    <string name="tutorial_lives">These are your lives,when\n they get to 0, the game ends!</string>
+    <string name="tutorial_word">This word will fall from the top of the screen. You should decide if it is the correct translation of the another word that\'s on the top! If your answer is wrong, or the word falls to the botton, you lose one life!</string>
+    <string name="tutorial_score">This is your score. The higher it gets, the faster the words will fall!</string>
+    <string name="tutorial_button">Negative button! Press if the translation is wrong!</string>
+    <string name="tutorial_positive">Positive button! Press if the translation is correct!</string>
 </resources>
